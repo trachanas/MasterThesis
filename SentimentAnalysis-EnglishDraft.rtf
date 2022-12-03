@@ -1,0 +1,320 @@
+{\rtf1\ansi\ansicpg1253\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;\f2\froman\fcharset0 TimesNewRomanPSMT;
+\f3\froman\fcharset0 Times-Italic;\f4\froman\fcharset0 Times-Bold;\f5\froman\fcharset0 TimesNewRomanPS-BoldMT;
+\f6\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red253\green128\blue8;\red0\green0\blue0;\red0\green0\blue0;
+\red29\green38\blue43;\red255\green255\blue255;\red24\green25\blue26;\red26\green26\blue26;\red38\green38\blue38;
+\red249\green249\blue249;\red14\green70\blue155;\red0\green0\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c100000\c57637\c0;\csgray\c0\c0;\cssrgb\c0\c0\c0;
+\cssrgb\c15294\c19608\c22353;\cssrgb\c100000\c100000\c100000;\cssrgb\c12549\c12941\c13333;\cssrgb\c13333\c13333\c13333;\cssrgb\c20000\c20000\c20000;
+\cssrgb\c98039\c98039\c98039;\cssrgb\c4314\c36078\c67059;\cssrgb\c0\c0\c100000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww13440\viewh9600\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\qj\partightenfactor0
+
+\f0\fs32 \cf0 \
+
+\f1\b \cf2 \cb3 \ul \ulc2 2.1 Definition\
+
+\f0\b0 \cf0 \ulnone \
+The explosive growth of technology has led to a tremendous expansion and use of the Internet. The daily use of applications of various orientations (e-commerce, e-trading, ticketing and travel platforms, video and movie playback platforms, blogging and microblogging, social media) has made it possible to collect huge amounts of data (structured and unstructured) on a daily basis. We refer to this data using the generic term Big Data. Mining big data, processing it through various techniques and tools and exploiting the results in real life applications opens up new horizons in a number of scientific and commercial fields. A special contribution to all this progress is made by social media. Social media platforms have enabled and still enable millions of users around the world to share their thoughts about an event, their criticism of a person, their view of reality. The vast sum of all this data is not negligible. On the contrary, it is valuable for public and private \cf4 \expnd0\expndtw0\kerning0
+organisations\cf0 \kerning1\expnd0\expndtw0 , governments, political parties and commercial companies. \cf4 \expnd0\expndtw0\kerning0
+Numerous forums, blogs, social networks, e-commerce web sites, news reports and additional web resources serve as platforms to express opinions, which can be utilized for understanding the opinions of the general public and consumers on social events, political movements and parties, company strategies, marketing campaigns, product preferences, and monitoring reputations. To accomplish these tasks, research communities and academicians are working rigorously on sentiment analysis since the beginning of 21st century.\
+\
+\
+Sentiment Analysis (SA) is a computational research field that studies, analyzes and evaluates people's feelings, opinions, evaluations, judgments, and thoughts about entities such as individuals, products, services, issues, and organisations. It is also known as Opinion Mining. The definitions in the literature may be considered equivalent, however some argue that they are two slightly separate subjects. \
+\
+
+\f1\b \cf2 (\uc0\u949 \u948 \u974  \u957 \u945  \u956 \u960 \u949 \u953  \u951  \u945 \u957 \u945 \u966 \u959 \u961 \u940  \u947 \u953 \u945  \u964 \u959  \u964 \u949 \u955 \u949 \u965 \u964 \u945 \u943 \u959 )\
+
+\f0\b0 \cf4 \
+Opinion Mining extracts and analyzes people\'92s opinion about an entity while Sentiment Analysis identifies the sentiment expressed in a text then analyzes it. Therefore, the target of SA is to find opinions, identify the sentiments they express, and then classify their polarity\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\qj\partightenfactor0
+
+\f1\b \cf4 (\uc0\u949 \u948 \u974  \u957 \u945  \u956 \u960 \u949 \u953  \u964 \u953  \u949 \u943 \u957 \u945 \u953  polarity)\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\qj\partightenfactor0
+
+\f0\b0 \cf4 For this paper, we consider both definitions equivalent. The one that is widely used is the term Sentiment Analysis (SA). It is worth mentioning that SA is a broad scientific field, it is an umbrella term, under which objects and applications with slightly different characteristics and requirements are developed.\
+\pard\pardeftab720\sa240\qj\partightenfactor0
+\cf4 The analysis of this data to extract underlying user\'92s opinion and sentiment is a challenging task.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\qj\partightenfactor0
+\cf4 \
+For a machine, the Sentiment Analysis problem can be formulated as a 5 entity interaction: an owner (a user) adopts a View on a Topic and expresses it through Sentiment at a specific Time.\cf2  To a machine, opinion is a \'93quintuple\'94, an object made up of 5 different things: [Bing Liu in NLP Handbook] (O\dn6 j\up0 , f\dn6 jk\up0 , SO\dn6 ijkl\up0 , h\dn6 i\up0 , t\dn6 l\up0 ), where O\dn6 j\up0 = the object on which the opinion is on, f\dn6 jk \up0 = a feature of O\dn6 j\up0 , SO\dn6 ijkl \up0 = the sentiment value of the opinion, h\dn6 i \up0 = Opinion holder, t\dn6 l \up0 = the time at which the opinion is given. \
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f2\fs29\fsmilli14667 \cf4 \cb1 To make things even more interesting and challenging, there are two types of opinions, i.e., 
+\f3\i regular opinions 
+\f2\i0 and 
+\f3\i comparative opinions 
+\f2\i0 (Jindal and Liu, 2006b)
+\f4\b . 
+\f2\b0 A regular opinion expresses a sentiment only on an particular entity or an aspect of the entity, e.g., \'93
+\f3\i Coke tastes very good,
+\f2\i0 \'94 which expresses a positive sentiment on the aspect 
+\f3\i taste 
+\f2\i0 of Coke. A comparative opinion compares multiple entities based on some of their shared aspects, e.g., \'93
+\f3\i Coke tastes better than Pepsi
+\f2\i0 ,\'94 which compares Coke and Pepsi based on their tastes (an aspect) and expresses a preference for Coke (see Chapter 8). 
+\f0\fs32 \cf2 \cb3 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\qj\partightenfactor0
+\cf2 \
+\
+\pard\pardeftab720\sa240\qj\partightenfactor0
+
+\f1\b\fs28 \cf4 \ul \ulc4 Different levels of sentiment analysis\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\qj\partightenfactor0
+
+\f0\b0\fs32 \cf4 \ulnone \uc0\u932 \u959  \u960 \u961 \u972 \u946 \u955 \u951 \u956 \u945  \u964 \u959 \u965  sentiment analysis, \u945 \u957 \u940 \u955 \u959 \u947 \u945  \u956 \u949  \u964 \u959  \u946 \u945 \u952 \u956 \u972  \u955 \u949 \u960 \u964 \u959 \u956 \u941 \u961 \u949 \u953 \u945 \u962  \u964 \u959 \u965 , \u967 \u969 \u961 \u943 \u950 \u949 \u964 \u945 \u953  \u963 \u949  \u947 \u949 \u957 \u953 \u954 \u941 \u962  \u947 \u961 \u945 \u956 \u956 \u941 \u962  \u963 \u949  3 \u949 \u960 \u943 \u960 \u949 \u948 \u945 :\
+\
+Sentence level: 
+\f1\b \uc0\u931 \u949  \u945 \u965 \u964 \u972  \u964 \u959  \u949 \u960 \u943 \u960 \u949 \u948 \u959 , \u947 \u943 \u957 \u949 \u964 \u945 \u953  \u960 \u961 \u959 \u963 \u960 \u940 \u952 \u949 \u953 \u945  \u949 \u954 \u964 \u943 \u956 \u951 \u963 \u951 \u962  \u964 \u959 \u965  \u963 \u965 \u957 \u945 \u953 \u963 \u952 \u942 \u956 \u945 \u964 \u959 \u962  \u960 \u959 \u965  \u945 \u966 \u959 \u961 \u940  \u941 \u957 \u945  \u959 \u955 \u972 \u954 \u955 \u951 \u961 \u959  document. 
+\f2\b0\fs29\fsmilli14667 \cb1 This level of analysis is closely related to 
+\f3\i subjectivity classification 
+\f2\i0 (Wiebe, Bruce and O'Hara, 1999), which distinguishes sentences (called 
+\f3\i objective sentences
+\f2\i0 ) that express factual information from sentences (called 
+\f3\i subjective sentences
+\f2\i0 ) that express subjective views and opinions. \uc0\u915 \u953 \u945  \u960 \u945 \u961 \u940 \u948 \u949 \u953 \u947 \u956 \u945 , \u951  \u960 \u961 \u972 \u964 \u945 \u963 \u951  \'93\u964 \u959  iPhone 10 \u949 \u943 \u957 \u945 \u953  \u945 \u960 \u943 \u963 \u964 \u949 \u965 \u964 \u959  \u954 \u953 \u957 \u951 \u964 \u972  \u964 \u951 \u955 \u941 \u966 \u969 \u957 \u959 \'94 \u949 \u943 \u957 \u945 \u953  \u941 \u957 \u945  document \u960 \u959 \u965  \u949 \u954 \u966 \u961 \u940 \u950 \u949 \u953  \u952 \u949 \u964 \u953 \u954 \u972  \u963 \u965 \u957 \u945 \u943 \u963 \u952 \u951 \u956 \u945  \u947 \u953 \u945  \u956 \u943 \u945  \u954 \u945 \u953  \u956 \u959 \u957 \u945 \u948 \u953 \u954 \u942  \u959 \u957 \u964 \u972 \u964 \u951 \u964 \u945 , \u964 \u959  iPhone 10. \u931 \u949  \u940 \u955 \u955 \u959  \u960 \u945 \u961 \u940 \u948 \u949 \u953 \u947 \u956 \u945  \'93\u964 \u959  iPhone 10  \u949 \u943 \u957 \u945 \u953  \u960 \u953 \u959  \u954 \u945 \u955 \u972  \u945 \u960 \u972  \u964 \u959  Xiaomi Redmi 10\'94 \u949 \u943 \u957 \u945 \u953  \u941 \u957 \u945  document \u960 \u959 \u965  \u949 \u954 \u966 \u961 \u940 \u950 \u949 \u953  \u941 \u957 \u945  \u945 \u961 \u957 \u951 \u964 \u953 \u954 \u972  \u954 \u945 \u953  \u941 \u957 \u945  \u952 \u949 \u964 \u953 \u954 \u972  \u963 \u965 \u957 \u945 \u943 \u963 \u952 \u951 \u956 \u945 . \u915 \u953 \u945  \u945 \u965 \u964 \u941 \u962  \u964 \u953 \u962  \u960 \u949 \u961 \u953 \u960 \u964 \u974 \u963 \u949 \u953 \u962 , \u964 \u959  document level \u948 \u949 \u957  \u949 \u943 \u957 \u945 \u953  \u964 \u972 \u963 \u959  \u945 \u954 \u961 \u953 \u946 \u941 \u962  \u972 \u963 \u959  \u952 \u945  \u952 \u941 \u955 \u945 \u956 \u949 .\
+
+\f0\fs32 \cb3 \
+\
+
+\f1\b document level: \uc0\u931 \u949  \u945 \u965 \u964 \u972  \u964 \u959  \u949 \u960 \u943 \u960 \u949 \u948 \u959 , \u947 \u943 \u957 \u949 \u964 \u945 \u953  \u960 \u961 \u959 \u963 \u960 \u940 \u952 \u949 \u953 \u945  \u949 \u954 \u964 \u943 \u956 \u951 \u963 \u951 \u962  \u964 \u959 \u965  \u963 \u965 \u957 \u945 \u953 \u963 \u952 \u942 \u956 \u945 \u964 \u959 \u962  \u960 \u959 \u965  \u945 \u966 \u959 \u961 \u940  \u941 \u957 \u945  \u959 \u955 \u972 \u954 \u955 \u951 \u961 \u959  document.  \u904 \u957 \u945  document \u945 \u960 \u959 \u964 \u949 \u955 \u949 \u943 \u964 \u945 \u953  \u945 \u960 \u972  \u956 \u943 \u945  \u942  \u960 \u949 \u961 \u953 \u963 \u963 \u972 \u964 \u949 \u961 \u949 \u962  \u960 \u961 \u959 \u964 \u940 \u963 \u949 \u953 \u962 . \u932 \u959  \u949 \u943 \u948 \u959 \u962  \u964 \u959 \u965  document \u960 \u959 \u953 \u954 \u943 \u955 \u955 \u949 \u953 . \u924 \u960 \u959 \u961 \u949 \u943  \u957 \u945  \u941 \u953 \u957 \u945 \u953  \u956 \u943 \u945  \u963 \u973 \u957 \u964 \u959 \u956 \u951  \u949 \u943 \u948 \u951 \u963 \u951 , \u941 \u957 \u945  tweet, \u941 \u957 \u945  \u940 \u961 \u952 \u961 \u959  \u942  \u956 \u953 \u945  \u954 \u961 \u953 \u964 \u953 \u954 \u942  \u947 \u953 \u945  \u941 \u957 \u945  \u960 \u961 \u959 \u970 \u959 \u957  \u942  \u956 \u953 \u945  \u964 \u945 \u953 \u957 \u943 \u945 . 
+\f2\b0\fs29\fsmilli14667 \cb1 For example, given a product review, the system determines whether the review expresses an overall positive or negative opinion about the product. \uc0\u931 \u964 \u959  \u949 \u960 \u943 \u960 \u949 \u948 \u959  \u954 \u940 \u957 \u959 \u965 \u956 \u949  \u964 \u951 \u957  \u965 \u960 \u972 \u952 \u949 \u963 \u951  \u972 \u964 \u953  \u964 \u959  document \u949 \u954 \u966 \u961 \u940 \u950 \u949 \u953  \u941 \u957 \u945  \u963 \u965 \u957 \u945 \u943 \u963 \u952 \u951 \u956 \u945  \u942  \u956 \u943 \u945  \u940 \u960 \u959 \u968 \u951  \u947 \u953 \u945  \u956 \u953 \u945  \u956 \u959 \u957 \u945 \u948 \u953 \u954 \u942  \u959 \u957 \u964 \u972 \u964 \u951 \u964 \u945 . \u931 \u949  \u948 \u953 \u945 \u966 \u959 \u961 \u949 \u964 \u953 \u954 \u942  \u960 \u949 \u961 \u943 \u960 \u964 \u969 \u963 \u951 , \u951  \u945 \u954 \u961 \u943 \u946 \u949 \u953 \u945  \u964 \u959 \u965  \u956 \u959 \u957 \u964 \u941 \u955 \u959 \u965  \u948 \u949 \u957  \u949 \u943 \u957 \u945 \u953  \u953 \u954 \u945 \u957 \u959 \u960 \u959 \u953 \u951 \u964 \u953 \u954 \u942 . \
+\
+\uc0\u932 \u959  document level \u945 \u960 \u959 \u964 \u949 \u955 \u949 \u943  \u956 \u943 \u945  \u947 \u949 \u957 \u943 \u954 \u949 \u965 \u963 \u951  \u964 \u959 \u965  sentence level, \u954 \u945 \u952 \u974 \u962  \u941 \u957 \u945  document \u945 \u960 \u959 \u964 \u949 \u955 \u949 \u943 \u964 \u945 \u953  \u945 \u960 \u972  \u960 \u961 \u959 \u964 \u940 \u963 \u949 \u953 \u962 . \u932 \u959  average sentiment \u964 \u951 \u962  \u954 \u940 \u952 \u949  \u960 \u961 \u972 \u964 \u945 \u963 \u951 \u962  \u954 \u945 \u952 \u959 \u961 \u943 \u950 \u949 \u953  \u954 \u945 \u953  \u964 \u959  average sentiment \u964 \u959 \u965  \u954 \u940 \u952 \u949  document.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\qj\partightenfactor0
+
+\f5\b \cf4 Aspect and entity level: \uc0\u914 \u945 \u963 \u953 \u954 \u942  \u953 \u948 \u941 \u945  \u947 \u953 \u945  \u945 \u965 \u964 \u972  \u964 \u959  \u949 \u960 \u943 \u960 \u949 \u948 \u959  \u949 \u943 \u957 \u945 \u953  \u972 \u964 \u953  \u956 \u943 \u945  \u940 \u960 \u959 \u968 \u951  \u945 \u966 \u959 \u961 \u940  \u941 \u957 \u945  \u963 \u965 \u957 \u945 \u943 \u963 \u952 \u951 \u956 \u945  (positive, negative, neutral) \u947 \u953 \u945  \u941 \u957 \u945  target. 
+\f2\b0 An opinion without its target being identified is of limited use. Realizing the importance of opinion targets also helps us understand the sentiment analysis problem better. \uc0\u915 \u953 \u945  \u960 \u945 \u961 \u940 \u948 \u949 \u953 \u947 \u956 \u945 , \u951  \u940 \u960 \u959 \u968 \u951  \'93\u964 \u959  \u957 \u941 \u959  \u956 \u945 \u962  \u945 \u965 \u964 \u959 \u954 \u943 \u957 \u951 \u964 \u959  \u949 \u943 \u957 \u945 \u953  \u945 \u961 \u954 \u949 \u964 \u940  \u969 \u961 \u945 \u943 \u959 , \u946 \u941 \u946 \u945 \u953 \u945  \u951  \u964 \u953 \u956 \u942  \u964 \u959 \u965  \u942 \u964 \u945 \u957  \u965 \u968 \u951 \u955 \u942 \'94 \u945 \u966 \u959 \u961 \u940  \u964 \u953 \u962  \u949 \u958 \u942 \u962  \u959 \u957 \u964 \u972 \u964 \u951 \u964 \u949 \u962 : \u951  \u959 \u957 \u964 \u972 \u964 \u951 \u964 \u945  target \'93\u945 \u965 \u964 \u959 \u954 \u943 \u957 \u951 \u964 \u959 \'94 \u947 \u953 \u945  \u964 \u951 \u957  \u959 \u960 \u959 \u943 \u945  \u949 \u954 \u966 \u961 \u940 \u950 \u949 \u964 \u945 \u953  \u956 \u953 \u945  \u952 \u949 \u964 \u953 \u954 \u942  \u940 \u960 \u959 \u968 \u951  \u954 \u945 \u953  \u951  \u959 \u957 \u964 \u972 \u964 \u951 \u964 \u945  target \'93\u964 \u959  \u967 \u961 \u974 \u956 \u945 \'94 \u964 \u959 \u965  \u945 \u965 \u964 \u959 \u954 \u953 \u957 \u942 \u964 \u959 \u965  \u947 \u953 \u945  \u964 \u951 \u957  \u959 \u960 \u959 \u943 \u945  \u949 \u954 \u966 \u961 \u940 \u950 \u949 \u964 \u945 \u953  \u956 \u943 \u945  \u945 \u961 \u957 \u951 \u964 \u953 \u954 \u942  \u940 \u960 \u959 \u968 \u951 . \u931 \u949  \u960 \u959 \u955 \u955 \u941 \u962  \u949 \u966 \u945 \u961 \u956 \u959 \u947 \u941 \u962 , \u956 \u943 \u945  \u959 \u957 \u964 \u972 \u964 \u951 \u964 \u945  target \u960 \u949 \u961 \u953 \u947 \u961 \u940 \u966 \u949 \u964 \u945 \u953  \u954 \u945 \u953  \u963 \u965 \u957 \u959 \u955 \u953 \u954 \u940  \u954 \u945 \u953  \u956 \u949  \u946 \u940 \u963 \u951  \u964 \u953 \u962  \u954 \u940 \u960 \u959 \u953 \u949 \u962  \u942  \u972 \u955 \u949 \u962  \u964 \u953 \u962  \u949 \u960 \u953 \u956 \u941 \u961 \u959 \u965 \u962  \u960 \u964 \u965 \u967 \u941 \u962  \u964 \u951 \u962 .The aspect-level is even more difficult than sentence and document level. \u913 \u965 \u964 \u972  \u959 \u966 \u949 \u943 \u955 \u949 \u964 \u945 \u953  \u963 \u964 \u959  \u972 \u964 \u953  \u963 \u964 \u959  aspect level \u960 \u961 \u959 \u963 \u960 \u945 \u952 \u949 \u943  \u957 \u945  \u949 \u961 \u949 \u965 \u957 \u942 \u963 \u949 \u953  \u964 \u953  \u945 \u961 \u941 \u963 \u949 \u953  \u963 \u965 \u947 \u954 \u949 \u954 \u961 \u953 \u956 \u941 \u957 \u945  \u963 \u964 \u959 \u957  \u954 \u972 \u963 \u956 \u959  \u954 \u945 \u953  \u964 \u953  \u972 \u967 \u953 , \u963 \u949  \u945 \u957 \u964 \u943 \u952 \u949 \u963 \u951  \u956 \u949  \u964 \u945  \u940 \u955 \u955 \u945  level \u960 \u959 \u965  \u949 \u958 \u940 \u947 \u959 \u965 \u957  \u941 \u957 \u945  \u963 \u965 \u957 \u945 \u943 \u963 \u965 \u947 \u945 \u956 \u945  \u963 \u965 \u957 \u959 \u955 \u953 \u954 \u940  \u947 \u953 \u945  \u956 \u943 \u945  \u959 \u957 \u964 \u972 \u964 \u951 \u964 \u945 .\
+ It consists of several sub-problems, which we are challenging.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\qj\partightenfactor0
+
+\f1\b\fs32 \cf2 \cb3 \ul \ulc2 2.2 General Methodology\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\qj\partightenfactor0
+
+\f0\b0 \cf2 \ulnone \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\qj\partightenfactor0
+\cf4 The general methodology in the Emotion Analysis process includes the following steps:\
+\
+1) Data selection/data scraping\
+2) Data analysis\
+	2.1) Preprocessing\
+	2.2) Visualisation\
+3)  Approach selection\
+4) Task of SA\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\qj\partightenfactor0
+
+\f1\b \cf4 DATA SELECTION\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\qj\partightenfactor0
+
+\f0\b0 \cf4 \
+There is a wide variety of sources on the Internet, which determines the format and content of the data used in sentiment analysis applications. A user is able to collect data, which comes from text, images, audio or even video. Popular websites offer either free or paid various APIs for data extraction. There are many popular APIs developed either by major social media platforms (such as Facebook, Twitter, Instagram, Sina-Wiebo) or by the research community. Through these APIs, a user can extract large datasets from posts and other information made public by millions of users and leverage them in their application.\
+\
+
+\f1\b \cf2 \uc0\u956 \u960 \u959 \u961 \u949 \u943  \u957 \u945  \u956 \u960 \u949 \u953  \u941 \u957 \u945  \u960 \u953 \u957 \u945 \u954 \u945 \u954 \u953  \u956 \u949  \u949 \u957 \u948 \u949 \u953 \u954 \u964 \u953 \u954 \u940  \u959 \u957 \u972 \u956 \u945 \u964 \u945  apis\
+\
+
+\f0\b0 \cf4 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\qj\partightenfactor0
+
+\f1\b \cf4 DATA ANALYSIS\
+	Data Preprocessing\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f2\b0\fs29\fsmilli14667 \cf4 \cb1 Raw data acquired from various sources often needs to be preprocessed before launching a fully fledged analysis. \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\fs34 \AppleTypeServices\AppleTypeServicesF65539 \cf5 \cb6 Data preprocessing is a data mining technique which is used to transform the raw data in a useful and efficient format for a machine 
+\fs28 \AppleTypeServices \cf7 in order to ensure or enhance performance.
+\f2\fs29\fsmilli14667 \cf4 \cb1 \
+Some popular preprocessing steps are: \
+i) Tokenization: 
+\f0\fs36 \cf8 \cb6 is a way of separating a piece of text into smaller units called tokens. Here, tokens can be either words, characters, or subwords. Hence, tokenization can be broadly classified into 3 types \'96 word, character, and subword (n-gram characters) tokenization.\
+ii) stop word removal:	Stop words are usually articles, conjunctions (), pronouns, some regularly used verbs and adverbs that add noise to text, do not contribute the analysis and hence they should be dropped during the preprocessing step.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f2\fs29\fsmilli14667 \cf4 \cb1 iii) Stemming is the process to bring a word into its root form, while ignoring other POS of the word.\
+iv) POS tagging is performed to recognize different parts of speech in the text, which is quite essential for natural language processing.\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f5\b \cf4 \uc0\u956 \u960 \u959 \u961 \u974  \u957 \u945  \u946 \u940 \u955 \u969  \u954 \u945 \u953  \u949 \u948 \u974  \u941 \u957 \u945  \u960 \u953 \u957 \u945 \u954 \u940 \u954 \u953  \u956 \u949  \u948 \u953 \u940 \u966 \u959 \u961 \u945  \u960 \u945 \u961 \u945 \u948 \u949 \u943 \u947 \u956 \u945 \u964 \u945  \u945 \u960 \u972  preprocessing.
+\f0\b0\fs36 \cf8 \cb6 \
+\
+\
+
+\f1\b \ul Data visualization \
+\pard\pardeftab720\qj\partightenfactor0
+
+\f6\b0\fs32 \cf9 \cb10 \ulnone Data visualization is the graphical representation of information and data. By using v{\field{\*\fldinst{HYPERLINK "https://www.tableau.com/data-insights/reference-library/visual-analytics"}}{\fldrslt \cf11 \ul \ulc11 isual elements like charts, graphs, and maps}}, data visualization tools provide an accessible way to see and understand trends, outliers, and patterns in data. Additionally, it provides an excellent way for employees, business owners or researchers  to present data to non-technical audiences without confusion.\
+\
+Text data visualisation provides valuable insights into the form and content of the data we use. \
+We can perform various explanatory tasks such as word frequency analysis, sentence length analysis, average word length analysis, giving the opportunity to user to have a better view for the data they exploit.\
+\pard\pardeftab720\partightenfactor0
+\cf9 \
+\
+
+\f4\b \ul APPROACH SELECTION\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f6\b0\fs26\fsmilli13333 \cf4 \cb1 \ulnone Three mainly used approaches for Sentiment Analysis include Lexicon Based Approach, Machine Learning Approach, and Hybrid Approach. A user is i\
+
+\fs24 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b\fs32 \cf4 \cb3 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\qj\partightenfactor0
+
+\f0\b0 \cf4 \
+\
+In trying to implement a Sentiment Analysis problem, 3 main approaches are mainly chosen. These are: the Lexicon Based Approach, the Machine Learning approach and the hybrid one.\
+Each of these approaches is divided into several sub-solutions. \
+\
+Lexicon Based Approach\
+\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f6\fs26\fsmilli13333 \cf4 \cb1 Lexicons are the collection of tokens where each token is assigned with a predefined score which indicates the neutral, positive and negative nature of the text (Kiritchenko et al. \cf12 2014\cf4 ). \
+\uc0\u922 \u940 \u952 \u949  token \u948 \u953 \u945 \u952 \u941 \u964 \u949 \u953  \u941 \u957 \u945  polarity score. \u927 \u953  \u964 \u953 \u956 \u941 \u962  \u964 \u959 \u965  score \u946 \u961 \u943 \u963 \u954 \u959 \u957 \u964 \u945 \u953  \u963 \u964 \u959  \u960 \u949 \u948 \u943 \u959  \u964 \u953 \u956 \u974 \u957  [-1, +1]. \u908 \u963 \u959  \u960 \u953 \u959  \u941 \u957 \u964 \u959 \u957 \u959  \u949 \u943 \u957 \u945 \u953  \u964 \u959  \u952 \u949 \u964 \u953 \u954 \u972  \u963 \u965 \u957 \u945 \u943 \u963 \u952 \u951 \u956 \u945  \u960 \u959 \u965  \u967 \u945 \u961 \u945 \u954 \u964 \u951 \u961 \u943 \u950 \u949 \u953  \u941 \u957 \u945  token, \u964 \u972 \u963 \u959  \u964 \u959  \u963 \u954 \u959 \u961  \u964 \u959 \u965  \u960 \u961 \u959 \u963 \u949 \u947 \u947 \u943 \u950 \u949 \u953  \u964 \u959  +1 (\u964 \u959  \u965 \u968 \u951 \u955 \u972 \u964 \u949 \u961 \u959  \u963 \u954 \u959 \u961 -\'93strong positive\'94). \u913 \u957 \u964 \u953 \u963 \u964 \u961 \u972 \u966 \u969 \u962 , \u972 \u963 \u959  \u960 \u953 \u959  \u941 \u957 \u964 \u959 \u957 \u959  \u949 \u943 \u957 \u945 \u953  \u964 \u959  \u945 \u961 \u957 \u951 \u964 \u953 \u954 \u972  \u963 \u965 \u957 \u945 \u943 \u963 \u952 \u951 \u956 \u945 , \u964 \u972 \u963 \u959  \u964 \u959  \u963 \u954 \u959 \u961  \u964 \u959 \u965  \u960 \u961 \u959 \u963 \u949 \u947 \u947 \u943 \u950 \u949 \u953  \u964 \u959  -1 (\u964 \u959  \u967 \u945 \u956 \u951 \u955 \u972 \u964 \u949 \u961 \u959  \u963 \u954 \u959 \u961 -\'93strong negative\'94). \u919  \u964 \u953 \u956 \u942  0 \u947 \u953 \u945  \u964 \u959  score \u949 \u957 \u972 \u962  token \u965 \u960 \u959 \u948 \u949 \u953 \u954 \u957 \u973 \u949 \u953  \u964 \u951 \u957  \u959 \u965 \u948 \u949 \u964 \u949 \u961 \u972 \u964 \u951 \u964 \u945  \u964 \u959 \u965 . \u931 \u949  \u956 \u953 \u945  lexicon based \u960 \u961 \u959 \u963 \u941 \u947 \u947 \u953 \u963 \u951 , \u941 \u957 \u945  \u954 \u949 \u943 \u956 \u949 \u957 \u959  \u942  \u954 \u961 \u953 \u964 \u953 \u954 \u942  \u960 \u961 \u974 \u964 \u945  \u967 \u969 \u961 \u943 \u950 \u949 \u964 \u945 \u953  \u963 \u949  tokens. \u931 \u964 \u951  \u963 \u965 \u957 \u941 \u967 \u949 \u953 \u945 , \u947 \u953 \u945  \u954 \u940 \u952 \u949  token, \u965 \u960 \u959 \u955 \u959 \u947 \u943 \u950 \u949 \u964 \u945 \u953  \u960 \u961 \u974 \u964 \u945  \u958 \u949 \u967 \u969 \u961 \u953 \u963 \u964 \u940  \u964 \u959  \u952 \u949 \u964 \u953 \u954 \u972 , \u945 \u961 \u957 \u951 \u964 \u953 \u954 \u972  \u954 \u945 \u953  \u959 \u965 \u948 \u941 \u964 \u949 \u961 \u959  score. \u931 \u964 \u959  \u964 \u949 \u955 \u953 \u954 \u972  \u963 \u964 \u940 \u948 \u953 \u959 , \u951  \u963 \u965 \u957 \u959 \u955 \u953 \u954 \u942  \u960 \u972 \u955 \u969 \u963 \u951  \u964 \u959 \u965  \u954 \u949 \u953 \u956 \u941 \u957 \u959 \u965  \u965 \u960 \u959 \u955 \u959 \u947 \u943 \u950 \u949 \u964 \u945 \u953  based on the highest value of indi- vidual scores. \
+\uc0\u917 \u943 \u957 \u945 \u953  \u956 \u943 \u945  unsupervised \u964 \u949 \u967 \u957 \u953 \u954 \u942 , \u954 \u945 \u952 \u974 \u962  \u948 \u949 \u957  \u965 \u960 \u940 \u961 \u967 \u949 \u953  \u945 \u957 \u940 \u947 \u954 \u951  \u947 \u953 \u945  pretrained data. \u914 \u941 \u946 \u945 \u953 \u945 , \u954 \u945 \u952 \u959 \u961 \u953 \u963 \u964 \u953 \u954 \u942 \u962  \u963 \u951 \u956 \u945 \u963 \u943 \u945 \u962  \u949 \u943 \u957 \u945 \u953  \u951  \u973 \u960 \u945 \u961 \u958 \u951  \u949 \u957 \u972 \u962  sentiment lexicon \u947 \u953 \u945  \u952 \u949 \u964 \u953 \u954 \u959 \u973 \u962  \u954 \u945 \u953  \u945 \u961 \u957 \u951 \u964 \u953 \u954 \u959 \u973 \u962  \u972 \u961 \u959 \u965 \u962 . \u935 \u961 \u951 \u963 \u953 \u956 \u959 \u960 \u959 \u953 \u949 \u943 \u964 \u945 \u953  \u956 \u949  \u953 \u954 \u945 \u957 \u959 \u960 \u959 \u953 \u951 \u964 \u953 \u954 \u940  \u945 \u960 \u959 \u964 \u949 \u955 \u941 \u963 \u956 \u945 \u964 \u945  \u963 \u964 \u959  SA sentence level \u954 \u945 \u953  feature level. \
+\uc0\u914 \u941 \u946 \u945 \u953 \u945 , \u945 \u965 \u964 \u959 \u973  \u964 \u959 \u965  \u949 \u943 \u948 \u959 \u965 \u962  \u951  \u960 \u961 \u959 \u963 \u941 \u947 \u947 \u953 \u963 \u951  \u949 \u943 \u957 \u945 \u953  \u949 \u965 \u940 \u955 \u969 \u964 \u951  \u963 \u949  \u955 \u940 \u952 \u951  \u960 \u959 \u965  \u959 \u966 \u949 \u943 \u955 \u959 \u957 \u964 \u945 \u953  \u963 \u964 \u945  semantics \u956 \u943 \u945 \u962  \u947 \u955 \u974 \u963 \u963 \u945 \u962 . \u924 \u943 \u945  \u955 \u941 \u958 \u951  \u956 \u960 \u959 \u961 \u949 \u943  \u957 \u945  \u941 \u967 \u949 \u953  \u952 \u949 \u964 \u953 \u954 \u972  \u963 \u965 \u957 \u945 \u943 \u963 \u952 \u951 \u956 \u945  \u956 \u941 \u963 \u945  \u963 \u949  \u941 \u957 \u945  \u963 \u965 \u947 \u954 \u949 \u954 \u961 \u953 \u956 \u941 \u957 \u959  \u960 \u955 \u945 \u943 \u963 \u953 \u959  \u954 \u945 \u953  \u945 \u961 \u957 \u951 \u964 \u953 \u954 \u942  \u963 \u949  \u954 \u940 \u960 \u959 \u953 \u959 . \u932 \u941 \u964 \u959 \u953 \u959 \u962  \u954 \u945 \u964 \u945 \u963 \u964 \u940 \u963 \u949 \u953 \u962  \u949 \u943 \u957 \u945 \u953  \u954 \u943 \u957 \u948 \u965 \u957 \u959 \u962  \u954 \u945 \u953  \u964 \u951 \u957  \u945 \u954 \u961 \u943 \u946 \u949 \u953 \u945  \u964 \u959 \u965  \u956 \u959 \u957 \u964 \u941 \u955 \u959 \u965  \u956 \u945 \u962 . For instance, given the word \'93small\'94 and the sentences \'93The TV screen is too small\'94 and \'93This camera is extremely small\'94, the word \'93small\'94 in the first sentence is negative, as people generally prefer large screens, whereas in the sec- ond sentence it is positive, as if the camera is small, it will be easy to carry. This issue can be overcome by developing a domain-specific sentiment lexicon or by adapting an existing vocabulary. \
+\uc0\u919  lexicon based \u945 \u957 \u940 \u955 \u965 \u963 \u951  \u948 \u953 \u945 \u953 \u961 \u949 \u943 \u964 \u945 \u953  \u963 \u949  2 \u965 \u960 \u959 \u954 \u945 \u964 \u951 \u947 \u959 \u961 \u943 \u949 \u962 \
+Corpus based Approach (\uc0\u956 \u949  \u965 \u960 \u959 \u954 \u945 \u964 \u951 \u947 \u959 \u961 \u943 \u949 \u962  Statistical \u954 \u945 \u953  semantic)\
+The approach employs semantic and syntactic patterns to ascertain the sentence\'92s emo- tion. This approach begins with a predefined set of sentiment terms and their orientation and then investigates syntactic or similar patterns to discover sentiment tokens and their orientation in a huge corpus. This is a situation-specific method that requires a signifi- cant amount of labeled data to train. However, it aids in resolving the issue of opinion words with context-dependent orientations. 
+\fs24 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f4\b\fs34\fsmilli17333 \cf4 A survey on sentiment analysis methods, applications, and challenges 
+\f6\b0\fs24 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f4\b\fs26\fsmilli13333 \cf4 Mayur Wankhade
+\fs18\fsmilli9333 \up10 1,2 
+\fs26\fsmilli13333 \up0 \'b7 Annavarapu Chandra Sekhara Rao
+\fs18\fsmilli9333 \up10 1,2 
+\fs26\fsmilli13333 \up0 \'b7 Chaitanya Kulkarni
+\fs18\fsmilli9333 \up10 1,2 
+\f6\b0\fs26\fsmilli13333 \up0 \
+	Statistical Approach
+\fs24 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\fs26\fsmilli13333 \cf4 The seed opinion words or co-occurrence patterns can be found using statistical approach. The rough idea behind this approach is that if it appears in positive texts more than negative texts, then it is more likely to be positive or vice versa. The key premise of this approach is that if comparable sentiment tokens are fre- quently observed in the same environment, they will likely have the same orientation. As a result, the orientation of the new token is determined by the frequency with which it appears alongside other tokens detected in a similar context. 
+\fs24 \
+
+\fs26\fsmilli13333 In this approach, the similarity score is calculated between tokens that are used for Sentiment Analysis. Wordnet is commonly used for this task. Antonyms and synonyms can be easily found using this approach as similar words have a positive score or higher value. In Maks and Vossen (\cf12 2012\cf4 ) proposed that semantic approach can be used in various applications to build a lexicon model that can be used to describe adjectives, verbs, and nouns to use in Sentiment Analysis. They described, the in-depth description of subjectivity relations among the characters in a statement conveying distinct attitudes for each character. subjectivity tagged with the knowledge relating to both identity and orientation of attitude holder. 
+\fs24 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f4\b \cf4 \uc0\u932 \u959  \u963 \u967 \u942 \u956 \u945  \u963 \u964 \u951 \u957  \u949 \u953 \u954 \u972 \u957 \u945  \u956 \u949  \u964 \u945  \u948 \u953 \u945 \u966 \u959 \u961 \u949 \u964 \u953 \u954 \u940  approaches \u949 \u943 \u957 \u945 \u953  \u955 \u940 \u952 \u959 \u962 , to corpus based \u949 \u943 \u957 \u945 \u953  \u945 \u965 \u964 \u972  \u956 \u949  \u964 \u953 \u962  2 \u965 \u960 \u959 \u954 \u945 \u964 \u951 \u947 \u959 \u961 \u943 \u949 \u962  \u954 \u945 \u953  \u972 \u967 \u953  \u964 \u959  Dictionary based \
+\
+Dictionary Method\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f6\b0 \cf4 \uc0\u922 \u945 \u952 \u959 \u961 \u953 \u963 \u964 \u953 \u954 \u942  \u963 \u965 \u956 \u946 \u959 \u955 \u942  \u963 \u949  \u945 \u965 \u964 \u942  \u964 \u951  \u960 \u961 \u959 \u963 \u941 \u947 \u947 \u953 \u963 \u951  \u941 \u967 \u949 \u953  \u941 \u957 \u945  \u963 \u973 \u957 \u959 \u955 \u959  \u945 \u960 \u972  opinion words, \u959 \u953  \u959 \u960 \u959 \u943 \u949 \u962  \u963 \u965 \u955 \u955 \u941 \u967 \u952 \u951 \u954 \u945 \u957  \u967 \u949 \u953 \u961 \u959 \u954 \u972 \u957 \u951 \u964 \u945 . \
+
+\fs26\fsmilli13333 The pri- mary assumption behind this approach is that synonyms have the same polarity as the base word, while antonyms have opposite polarity. \uc0\u913 \u965 \u964 \u972  \u964 \u959  \u945 \u961 \u967 \u953 \u954 \u972  \u963 \u949 \u964  \u949 \u956 \u960 \u955 \u959 \u965 \u964 \u943 \u950 \u949 \u964 \u945 \u953  \u956 \u949  \u957 \u941 \u959 \u965 \u962  \u972 \u961 \u959 \u965 \u962  \u960 \u959 \u965  \u956 \u960 \u959 \u961 \u949 \u943  \u941 \u957 \u945 \u962  \u967 \u961 \u942 \u963 \u964 \u951 \u962  \u957 \u945  \u946 \u961 \u949 \u953  \u956 \u941 \u963 \u945  \u945 \u960 \u972  \u948 \u953 \u940 \u966 \u959 \u961 \u949 \u962  \u955 \u949 \u958 \u953 \u954 \u959 \u955 \u959 \u947 \u953 \u954 \u941 \u962  \u960 \u951 \u947 \u941 \u962 . \u924 \u949  \u945 \u965 \u964 \u972  \u964 \u959  \u964 \u961 \u972 \u960 \u959 , \u949 \u958 \u949 \u953 \u948 \u943 \u954 \u949 \u965 \u949 \u964 \u945 \u953  \u960 \u949 \u961 \u953 \u963 \u963 \u972 \u964 \u949 \u961 \u959 , \u963 \u964 \u959  \u964 \u949 \u955 \u953 \u954 \u972  \u963 \u964 \u940 \u948 \u953 \u959  \u964 \u951 \u962  \u954 \u945 \u964 \u945 \u963 \u954 \u949 \u965 \u942 \u962  \u949 \u957 \u972 \u962  dictionary, \u959  \u967 \u961 \u942 \u963 \u964 \u951 \u962  \u956 \u960 \u959 \u961 \u949 \u943  \u957 \u945  \u954 \u940 \u957 \u949 \u953  \u954 \u945 \u953  \u967 \u949 \u953 \u961 \u959 \u954 \u943 \u957 \u951 \u964 \u951  \u945 \u958 \u953 \u959 \u955 \u972 \u947 \u951 \u963 \u951  \u954 \u945 \u953  \u948 \u953 \u972 \u961 \u952 \u969 \u963 \u951  \u956 \u949  \u963 \u954 \u959 \u960 \u972  \u957 \u945  \u948 \u953 \u945 \u963 \u966 \u945 \u955 \u943 \u963 \u949 \u953  \u964 \u951 \u957  \u959 \u961 \u952 \u972 \u964 \u951 \u964 \u945  \u964 \u959 \u965 . 
+\fs24 \
+\
+\uc0\u917 \u948 \u974  \u956 \u960 \u959 \u961 \u949 \u943  \u957 \u945  \u956 \u960 \u949 \u953  \u964 \u959  table 3 you paper\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f4\b\fs34\fsmilli17333 \cf4 A survey on sentiment analysis methods, applications, and challenges 
+\f6\b0\fs24 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f4\b\fs26\fsmilli13333 \cf4 Mayur Wankhade
+\fs18\fsmilli9333 \up10 1,2 
+\fs26\fsmilli13333 \up0 \'b7 Annavarapu Chandra Sekhara Rao
+\fs18\fsmilli9333 \up10 1,2 
+\fs26\fsmilli13333 \up0 \'b7 Chaitanya Kulkarni
+\fs18\fsmilli9333 \up10 1,2 \
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f6\b0\fs28 \cf4 Machine Learning approach uses machine learning techniques and algorithms in order to perform sentiment analysis. This approach can be either supervised or unsupervised. 
+\fs26\fsmilli13333 \up0 The machine learning technique utilizes syntactic and/or linguistic factors to address sentiment classification as a standard text classification issue utilizing syntactic and/or lin- guistic factors. The categorization model associates the underlying record\'92s features with one of the class labels. The model is then used to predict a class label for a given instance of an unknown class. Sentiment analysis algorithms can be trained to read beyond simple definitions to comprehend contextual information, sar- casm, and misapplied words. 
+\fs24 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f4\b\fs26\fsmilli13333 \cf4 Naive Bayes (NB) 
+\f6\b0\fs24 \
+
+\f4\b\fs26\fsmilli13333 Support vector machine (SVM) 
+\f6\b0\fs24 \
+
+\f4\b\fs26\fsmilli13333 Logistic regression (LR) 
+\f6\b0\fs24 \
+
+\f4\b\fs26\fsmilli13333 Decision tree (DT) 
+\f6\b0\fs24 \
+
+\f4\b\fs26\fsmilli13333 Maximum entropy (ME) 
+\f6\b0\fs24 \
+
+\f4\b\fs26\fsmilli13333 K\uc0\u8208 nearest neighbours (KNN) \
+4.4 Neural network LSTM, CN,N RNN
+\f6\b0\fs24 \
+\
+
+\f4\b\fs26\fsmilli13333 4.3 Hybrid approach \
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f6\b0 \cf4 Hybrid approach combines machine learning and lexicon-based approaches. Hybrid is a term that refers to the combination of machine learning and lexicon-based techniques to sentiment analysis. The hybrid technique combines the two and is extremely popular, with sentiment lexicons playing a significant role in the majority of systems. Sentiment analysis is a hybrid approach, including both statistical and knowledge-based methods for polarity recognition. 
+\fs24 \
+\
+\
+\pard\pardeftab720\sa240\qj\partightenfactor0
+
+\f1\b\fs32 \cf4 \cb3 Challenges of sentiment analysis\
+\pard\pardeftab720\sa240\qj\partightenfactor0
+
+\f6\b0 \cf4 \cb1 Sentiment analysis is applicable to different types of data, each of which presents par- ticular challenges.  This data \uc0\u963 \u964 \u959  99% \u964 \u969 \u957  \u960 \u949 \u961 \u953 \u963 \u960 \u964 \u974 \u963 \u949 \u969 \u957  \u949 \u943 \u957 \u945 \u953  unstructured. SA \u967 \u961 \u949 \u953 \u940 \u950 \u949 \u964 \u945 \u953  \u957 \u945  \u945 \u957 \u964 \u953 \u956 \u949 \u964 \u969 \u960 \u943 \u963 \u949 \u953  \u945 \u960 \u959 \u964 \u949 \u955 \u949 \u963 \u956 \u945 \u964 \u953 \u954 \u940  \u948 \u953 \u940 \u966 \u959 \u961 \u949 \u962  key difficulties in order to improve its accuracy. \u924 \u949 \u961 \u953 \u954 \u941 \u962  \u945 \u960 \u972  \u945 \u965 \u964 \u941 \u962  \u949 \u943 \u957 \u945 \u953 :\
+\
+\pard\pardeftab720\sa240\qj\partightenfactor0
+
+\f3\i \cf4 Sarcasm 
+\f6\i0 People tend to use sarcasm when they do not meet their expectations. \uc0\u917 \u943 \u957 \u945 \u953  \u945 \u961 \u954 \u949 \u964 \u940  \u948 \u973 \u963 \u954 \u959 \u955 \u959  \u947 \u953 \u945  \u956 \u943 \u945  \u956 \u951 \u967 \u945 \u957 \u942  \u957 \u945  \u945 \u957 \u964 \u953 \u955 \u951 \u966 \u952 \u949 \u943  \u945 \u957  \u941 \u957 \u945 \u962  \u940 \u957 \u952 \u961 \u969 \u960 \u959 \u962  \u956 \u953 \u955 \u940  \u954 \u945 \u957 \u959 \u957 \u953 \u954 \u940  \u942  \u945 \u957  \u956 \u953 \u955 \u940  \u956 \u949  \u949 \u953 \u961 \u969 \u957 \u953 \u954 \u942  \u942  \u963 \u945 \u961 \u954 \u945 \u963 \u964 \u953 \u954 \u942  \u948 \u953 \u940 \u952 \u949 \u963 \u951 . \u928 \u941 \u961 \u945  \u945 \u960 \u972  \u964 \u953 \u962  \u955 \u941 \u958 \u949 \u953 \u962  \u954 \u945 \u953  \u964 \u953 \u962  \u960 \u961 \u959 \u964 \u940 \u963 \u949 \u953 \u962  \u960 \u959 \u965  \u945 \u960 \u959 \u964 \u949 \u955 \u959 \u973 \u957  \u941 \u957 \u945  \u954 \u949 \u943 \u956 \u949 \u957 \u959  \u942  \u960 \u959 \u965  \u945 \u957 \u964 \u945 \u955 \u955 \u940 \u963 \u959 \u965 \u957  2 \u940 \u957 \u952 \u961 \u969 \u960 \u959 \u953  \u967 \u961 \u949 \u953 \u940 \u950 \u949 \u964 \u945 \u953  \u957 \u945  \u947 \u957 \u969 \u961 \u943 \u950 \u949 \u953  \u954 \u940 \u960 \u959 \u953 \u959 \u962  \u964 \u959  \u960 \u955 \u945 \u943 \u963 \u953 \u959  \u964 \u951 \u962  \u963 \u965 \u950 \u942 \u964 \u951 \u963 \u951 \u962 , \u964 \u959  \u965 \u960 \u972 \u946 \u945 \u952 \u961 \u959  \u964 \u969 \u957  \u960 \u961 \u959 \u963 \u974 \u960 \u969 \u957  \u954 \u945 \u953  \u964 \u959 \u957  \u964 \u972 \u957 \u959  \u964 \u969 \u957  \u963 \u965 \u957 \u959 \u956 \u953 \u955 \u951 \u964 \u974 \u957 .Sarcasm is a type of sentiment in which people express implicit information, usually the polar opposite of the message con- tent, in order to emotionally hurt someone or mock something. For example, the sentence \'93what a politeness\'94 can be used eronically for a rude person.\
+Sarcasm detection in text mining is one of the most challenging tasks in NLP, but it has lately become an interesting.\
+\pard\pardeftab720\sa240\qj\partightenfactor0
+
+\fs24 \cf4 \
+\
+\pard\pardeftab720\sa240\qj\partightenfactor0
+
+\f3\i\fs32 \cf4 Informal style of writing 
+\f6\i0 Informal style of writing is the biggest challenge to all NLP tasks, including sentiment analysis. People are very casual about writing reviews or texts; they tend to use acronyms, emojis, shortcuts in their text which is very hard to pick up. Acronyms can be handled if they are universal. There are a lot of regional acronyms\cf12 \up10 14 \cf4 \up0 which change and grow day by day. 
+\fs24 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\qj\partightenfactor0
+
+\f0\fs32 \cf4 \cb3 \
+Grammatical and syntactic errors: \uc0\u963 \u949  \u948 \u953 \u940 \u966 \u959 \u961 \u945  \u963 \u964 \u965 \u955  \u954 \u949 \u953 \u956 \u941 \u957 \u959 \u965 , \u965 \u960 \u940 \u961 \u967 \u949 \u953  \u951  \u960 \u953 \u952 \u945 \u957 \u972 \u964 \u951 \u964 \u945  \u947 \u953 \u945  \u955 \u940 \u952 \u951  \u963 \u964 \u959  \u963 \u965 \u957 \u964 \u945 \u954 \u964 \u953 \u954 \u972  \u942 /\u954 \u945 \u953  \u963 \u964 \u951 \u957  \u959 \u961 \u952 \u959 \u947 \u961 \u945 \u966 \u943 \u945 . \u932 \u959  \u960 \u961 \u972 \u946 \u955 \u951 \u956 \u945  \u947 \u943 \u957 \u949 \u964 \u945 \u953  \u945 \u954 \u972 \u956 \u945  \u967 \u949 \u953 \u961 \u972 \u964 \u949 \u961 \u959  \u972 \u964 \u945 \u957  \u945 \u957 \u945 \u966 \u949 \u961 \u972 \u956 \u945 \u963 \u964 \u949  \u963 \u949  informal \u955 \u972 \u947 \u959 \u965 . \u932 \u941 \u964 \u959 \u953 \u959 \u965  \u949 \u943 \u948 \u959 \u965 \u962  \u955 \u940 \u952 \u951  \u952 \u945  \u956 \u960 \u959 \u961 \u959 \u973 \u957  \u957 \u945  \u955 \u965 \u952 \u959 \u973 \u957  \u956 \u949  spelling \u964 \u959 \u965  \u954 \u949 \u953 \u956 \u941 \u957 \u959 \u965 , \u967 \u969 \u961 \u943 \u962  \u946 \u941 \u946 \u945 \u953 \u945  \u957 \u945  \u955 \u973 \u957 \u949 \u964 \u945 \u953  \
+\
+\pard\pardeftab720\sa240\qj\partightenfactor0
+
+\f3\i \cf4 \cb1 Computational cost 
+\f6\i0 To get better accuracy, we need to increase the training data size and complicate the model, which will exponentially increase the computational cost of the model for training; high-end GPU may be required to train a model with a huge corpus. Models like SVM, NB are not computationally costly, but neural networks and attention models have shown that they are computationally costly. \
+\
+
+\f3\i Availability of data \uc0\u924 \u960 \u959 \u961 \u949 \u943  \u957 \u945  \u965 \u960 \u940 \u961 \u967 \u959 \u965 \u957  \u949 \u954 \u945 \u964 \u959 \u957 \u964 \u940 \u948 \u949 \u962  \u948 \u953 \u945 \u966 \u959 \u961 \u949 \u964 \u953 \u954 \u940  dataset \u964 \u945  \u959 \u960 \u959 \u943 \u945  \u949 \u943 \u957 \u945 \u953  \u948 \u953 \u945 \u952 \u941 \u963 \u953 \u956 \u945  \u948 \u953 \u945 \u948 \u953 \u954 \u964 \u965 \u945 \u954 \u940 , \u945 \u965 \u964 \u972  \u972 \u956 \u969 \u962  \u948 \u949  \u963 \u951 \u956 \u945 \u943 \u957 \u949 \u953  \u960 \u969 \u962  \u947 \u953 \u945  \u954 \u940 \u952 \u949  \u949 \u966 \u945 \u961 \u956 \u959 \u947 \u942  SA \u965 \u960 \u940 \u961 \u967 \u949 \u953  \u941 \u957 \u945  \u960 \u955 \u942 \u961 \u949 \u962  \u954 \u945 \u953  \u963 \u969 \u963 \u964 \u940  \u948 \u959 \u956 \u951 \u956 \u941 \u957 \u959  dataset. \u928 \u945 \u961 \u940 \u955 \u955 \u951 \u955 \u945 , \u954 \u940 \u952 \u949  \u948 \u953 \u945 \u952 \u941 \u963 \u953 \u956 \u959  dataset \u948 \u949  \u956 \u960 \u959 \u961 \u949 \u943  \u957 \u945  \u945 \u958 \u953 \u959 \u960 \u959 \u953 \u951 \u952 \u949 \u943  \u963 \u949  \u972 \u955 \u949 \u962  \u964 \u953 \u962  \u960 \u949 \u961 \u953 \u960 \u964 \u974 \u963 \u949 \u953 \u962  \u964 \u951 \u962  SA.  
+\f6\i0 For instance, a model trained on a hotel review dataset is not helpful in predicting sentiments of a stock or mutual fund dataset and vice versa. 
+\f3\i \uc0\u915 \u953 \u945  \u948 \u953 \u949 \u965 \u954 \u972 \u955 \u965 \u957 \u963 \u951  \u964 \u969 \u957  \u967 \u961 \u951 \u963 \u964 \u974 \u957 , \u948 \u953 \u940 \u966 \u959 \u961 \u945  \u948 \u951 \u956 \u959 \u966 \u953 \u955 \u942  sites \u960 \u945 \u961 \u941 \u967 \u959 \u965 \u957  \u948 \u953 \u940 \u966 \u959 \u961 \u945   \u949 \u973 \u967 \u961 \u951 \u963 \u964 \u945  APIs \u947 \u953 \u945  \u964 \u951  \u949 \u958 \u972 \u961 \u965 \u958 \u951  \u948 \u949 \u948 \u959 \u956 \u941 \u957 \u969 \u957  \u954 \u945 \u953  \u964 \u951  \u948 \u951 \u956 \u953 \u959 \u965 \u961 \u947 \u943 \u945  \u954 \u945 \u964 \u940 \u955 \u955 \u951 \u955 \u969 \u957  dataset.
+\f0\i0 \cb3 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\qj\partightenfactor0
+\cf4 \
+\pard\pardeftab720\sa240\qj\partightenfactor0
+
+\f3\i \cf4 \cb1 Adaptations of language 
+\f6\i0 Languages change as they move to different regions and places; although the base language remains the same, many factors influence language, such as language prominence, pronunciation, literacy rate, etc. For instance, consider Eng- lish language, which is widely spoken worldwide, but it is seen that many English varieties are spoken worldwide based on the regions like Indian, American, British, etc. Lots of words are used differently depending upon the region there are used. \uc0\u908 \u963 \u959  \u963 \u965 \u967 \u957 \u972 \u964 \u949 \u961 \u951  \u949 \u943 \u957 \u945 \u953  \u951  \u967 \u961 \u942 \u963 \u951  \u956 \u943 \u945 \u962  \u947 \u955 \u974 \u963 \u963 \u945 \u962 , \u964 \u972 \u963 \u959  \u960 \u953 \u959  \u960 \u953 \u952 \u945 \u957 \u972  \u949 \u943 \u957 \u945 \u953  \u957 \u945  \u965 \u960 \u940 \u961 \u967 \u959 \u965 \u957  \u948 \u953 \u945 \u952 \u941 \u963 \u953 \u956 \u945  \u949 \u961 \u947 \u945 \u955 \u949 \u943 \u945  \u947 \u953 \u945  \u964 \u951 \u957  \u949 \u960 \u949 \u958 \u949 \u961 \u947 \u945 \u963 \u943 \u945 . \u913 \u965 \u964 \u942  \u951  \u948 \u953 \u945 \u960 \u943 \u963 \u964 \u969 \u963 \u951  \u945 \u960 \u959 \u964 \u949 \u955 \u949 \u943  \u954 \u945 \u953  \u941 \u957 \u945  \u956 \u949 \u947 \u940 \u955 \u959  \u949 \u956 \u960 \u972 \u948 \u953 \u959  \u947 \u953 \u945  \u964 \u951 \u957  \u949 \u960 \u949 \u958 \u949 \u961 \u947 \u945 \u963 \u943 \u945  \u963 \u965 \u947 \u954 \u949 \u954 \u961 \u953 \u956 \u941 \u957 \u969 \u957  \u947 \u955 \u969 \u963 \u963 \u974 \u957 , \u972 \u960 \u969 \u962  \u947 \u953 \u945  \u960 \u945 \u961 \u940 \u948 \u949 \u953 \u947 \u956 \u945  \u951  \u949 \u955 \u955 \u951 \u957 \u953 \u954 \u942  \u947 \u955 \u974 \u963 \u963 \u945  \u960 \u959 \u965  \u949 \u943 \u957 \u945 \u953  \u951  \u946 \u940 \u963 \u951  \u964 \u959 \u965  dataset \u960 \u959 \u965  \u949 \u960 \u949 \u958 \u949 \u961 \u947 \u945 \u950 \u972 \u956 \u945 \u963 \u964 \u949 .\
+\
+\pard\pardeftab720\sa240\qj\partightenfactor0
+
+\f0 \cf4 \cb3 \
+}
